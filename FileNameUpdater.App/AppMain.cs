@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace FileNameUpdater.App
 {
-    static class Program
+    static class AppMain
     {
         /// <summary>
         /// The main entry point for the application.
@@ -16,7 +16,7 @@ namespace FileNameUpdater.App
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new AppForm());
         }
     }
 }

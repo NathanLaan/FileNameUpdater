@@ -1,6 +1,6 @@
 ﻿namespace FileNameUpdater.App
 {
-    partial class Form1
+    partial class AppForm
     {
         /// <summary>
         /// Required designer variable.
