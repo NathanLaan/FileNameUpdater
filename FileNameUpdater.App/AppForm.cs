@@ -26,5 +26,12 @@ namespace FileNameUpdater.App
             engine.Stop();
             this.Close();
         }
+
+        private void btnSelectPath_Click(object sender, EventArgs e)
+        {
+            //
+            // TODO: Open path...
+            //
+        }
     }
 }

@@ -28,18 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AppForm));
             this.sts = new System.Windows.Forms.StatusStrip();
             this.mnu = new System.Windows.Forms.MenuStrip();
             this.mnuFile = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuFileExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.tsc = new System.Windows.Forms.ToolStripContainer();
+            this.spc = new System.Windows.Forms.SplitContainer();
             this.tree = new System.Windows.Forms.TreeView();
             this.text = new System.Windows.Forms.TextBox();
+            this.tsMain = new System.Windows.Forms.ToolStrip();
+            this.btnSelectPath = new System.Windows.Forms.ToolStripButton();
             this.mnu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
+            this.tsc.ContentPanel.SuspendLayout();
+            this.tsc.TopToolStripPanel.SuspendLayout();
+            this.tsc.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spc)).BeginInit();
+            this.spc.Panel1.SuspendLayout();
+            this.spc.Panel2.SuspendLayout();
+            this.spc.SuspendLayout();
+            this.tsMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // sts
@@ -75,29 +83,47 @@
             this.mnuFileExit.Text = "E&xit";
             this.mnuFileExit.Click += new System.EventHandler(this.mnuFileExit_Click);
             // 
-            // splitContainer1
+            // tsc
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 24);
-            this.splitContainer1.Name = "splitContainer1";
             // 
-            // splitContainer1.Panel1
+            // tsc.ContentPanel
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.tree);
+            this.tsc.ContentPanel.Controls.Add(this.spc);
+            this.tsc.ContentPanel.Size = new System.Drawing.Size(632, 382);
+            this.tsc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tsc.Location = new System.Drawing.Point(0, 24);
+            this.tsc.Name = "tsc";
+            this.tsc.Size = new System.Drawing.Size(632, 407);
+            this.tsc.TabIndex = 2;
+            this.tsc.Text = "toolStripContainer1";
             // 
-            // splitContainer1.Panel2
+            // tsc.TopToolStripPanel
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.text);
-            this.splitContainer1.Size = new System.Drawing.Size(632, 407);
-            this.splitContainer1.SplitterDistance = 317;
-            this.splitContainer1.TabIndex = 2;
+            this.tsc.TopToolStripPanel.Controls.Add(this.tsMain);
+            // 
+            // spc
+            // 
+            this.spc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.spc.Location = new System.Drawing.Point(0, 0);
+            this.spc.Name = "spc";
+            // 
+            // spc.Panel1
+            // 
+            this.spc.Panel1.Controls.Add(this.tree);
+            // 
+            // spc.Panel2
+            // 
+            this.spc.Panel2.Controls.Add(this.text);
+            this.spc.Size = new System.Drawing.Size(632, 382);
+            this.spc.SplitterDistance = 317;
+            this.spc.TabIndex = 3;
             // 
             // tree
             // 
             this.tree.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tree.Location = new System.Drawing.Point(0, 0);
             this.tree.Name = "tree";
-            this.tree.Size = new System.Drawing.Size(317, 407);
+            this.tree.Size = new System.Drawing.Size(317, 382);
             this.tree.TabIndex = 0;
             // 
             // text
@@ -106,15 +132,35 @@
             this.text.Location = new System.Drawing.Point(0, 0);
             this.text.Multiline = true;
             this.text.Name = "text";
-            this.text.Size = new System.Drawing.Size(311, 407);
+            this.text.Size = new System.Drawing.Size(311, 382);
             this.text.TabIndex = 0;
+            // 
+            // tsMain
+            // 
+            this.tsMain.Dock = System.Windows.Forms.DockStyle.None;
+            this.tsMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnSelectPath});
+            this.tsMain.Location = new System.Drawing.Point(3, 0);
+            this.tsMain.Name = "tsMain";
+            this.tsMain.Size = new System.Drawing.Size(64, 25);
+            this.tsMain.TabIndex = 0;
+            // 
+            // btnSelectPath
+            // 
+            this.btnSelectPath.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnSelectPath.Image = ((System.Drawing.Image)(resources.GetObject("btnSelectPath.Image")));
+            this.btnSelectPath.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSelectPath.Name = "btnSelectPath";
+            this.btnSelectPath.Size = new System.Drawing.Size(23, 22);
+            this.btnSelectPath.Text = "toolStripButton1";
+            this.btnSelectPath.Click += new System.EventHandler(this.btnSelectPath_Click);
             // 
             // AppForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(632, 453);
-            this.Controls.Add(this.splitContainer1);
+            this.Controls.Add(this.tsc);
             this.Controls.Add(this.sts);
             this.Controls.Add(this.mnu);
             this.MainMenuStrip = this.mnu;
@@ -123,11 +169,18 @@
             this.Text = "File Name Updater";
             this.mnu.ResumeLayout(false);
             this.mnu.PerformLayout();
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            this.splitContainer1.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
+            this.tsc.ContentPanel.ResumeLayout(false);
+            this.tsc.TopToolStripPanel.ResumeLayout(false);
+            this.tsc.TopToolStripPanel.PerformLayout();
+            this.tsc.ResumeLayout(false);
+            this.tsc.PerformLayout();
+            this.spc.Panel1.ResumeLayout(false);
+            this.spc.Panel2.ResumeLayout(false);
+            this.spc.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spc)).EndInit();
+            this.spc.ResumeLayout(false);
+            this.tsMain.ResumeLayout(false);
+            this.tsMain.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,9 +192,12 @@
         private System.Windows.Forms.MenuStrip mnu;
         private System.Windows.Forms.ToolStripMenuItem mnuFile;
         private System.Windows.Forms.ToolStripMenuItem mnuFileExit;
-        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.ToolStripContainer tsc;
+        private System.Windows.Forms.SplitContainer spc;
         private System.Windows.Forms.TreeView tree;
         private System.Windows.Forms.TextBox text;
+        private System.Windows.Forms.ToolStrip tsMain;
+        private System.Windows.Forms.ToolStripButton btnSelectPath;
     }
 }
 
