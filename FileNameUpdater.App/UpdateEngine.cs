@@ -32,7 +32,10 @@ namespace FileNameUpdater.App
         public void Stop()
         {
             this.threadRunning = false;
-            this.thread.Abort();
+            if (this.thread != null)
+            {
+                this.thread.Abort();
+            }
         }
 
         private void Run()
