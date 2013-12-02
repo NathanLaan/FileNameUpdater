@@ -51,10 +51,19 @@
       <DependentUpon>AppForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AppMain.cs" />
+    <Compile Include="FolderDetailsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FolderDetailsPanel.Designer.cs">
+      <DependentUpon>FolderDetailsPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UpdateEngine.cs" />
     <EmbeddedResource Include="AppForm.resx">
       <DependentUpon>AppForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FolderDetailsPanel.resx">
+      <DependentUpon>FolderDetailsPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
