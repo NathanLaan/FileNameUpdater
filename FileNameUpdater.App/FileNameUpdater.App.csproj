@@ -51,6 +51,7 @@
       <DependentUpon>AppForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AppMain.cs" />
+    <Compile Include="Folder.cs" />
     <Compile Include="FolderDetailsPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>

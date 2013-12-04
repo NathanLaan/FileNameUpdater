@@ -31,43 +31,55 @@
             this.pnlTop = new System.Windows.Forms.Panel();
             this.pnlBottom = new System.Windows.Forms.Panel();
             this.lblFolderName = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtFolderName = new System.Windows.Forms.TextBox();
+            this.chkApplyName = new System.Windows.Forms.CheckBox();
             this.pnlTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTop
             // 
-            this.pnlTop.Controls.Add(this.textBox1);
+            this.pnlTop.Controls.Add(this.chkApplyName);
+            this.pnlTop.Controls.Add(this.txtFolderName);
             this.pnlTop.Controls.Add(this.lblFolderName);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(300, 80);
+            this.pnlTop.Size = new System.Drawing.Size(300, 58);
             this.pnlTop.TabIndex = 0;
             // 
             // pnlBottom
             // 
             this.pnlBottom.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBottom.Location = new System.Drawing.Point(0, 80);
+            this.pnlBottom.Location = new System.Drawing.Point(0, 58);
             this.pnlBottom.Name = "pnlBottom";
-            this.pnlBottom.Size = new System.Drawing.Size(300, 220);
+            this.pnlBottom.Size = new System.Drawing.Size(300, 242);
             this.pnlBottom.TabIndex = 1;
             // 
             // lblFolderName
             // 
             this.lblFolderName.AutoSize = true;
-            this.lblFolderName.Location = new System.Drawing.Point(4, 23);
+            this.lblFolderName.Location = new System.Drawing.Point(4, 6);
             this.lblFolderName.Name = "lblFolderName";
             this.lblFolderName.Size = new System.Drawing.Size(70, 13);
             this.lblFolderName.TabIndex = 0;
             this.lblFolderName.Text = "Folder Name:";
             // 
-            // textBox1
+            // txtFolderName
             // 
-            this.textBox1.Location = new System.Drawing.Point(80, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(217, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtFolderName.Location = new System.Drawing.Point(80, 3);
+            this.txtFolderName.Name = "txtFolderName";
+            this.txtFolderName.Size = new System.Drawing.Size(217, 20);
+            this.txtFolderName.TabIndex = 1;
+            // 
+            // chkApplyName
+            // 
+            this.chkApplyName.AutoSize = true;
+            this.chkApplyName.Location = new System.Drawing.Point(7, 29);
+            this.chkApplyName.Name = "chkApplyName";
+            this.chkApplyName.Size = new System.Drawing.Size(172, 17);
+            this.chkApplyName.TabIndex = 2;
+            this.chkApplyName.Text = "Apply folder name to file names";
+            this.chkApplyName.UseVisualStyleBackColor = true;
             // 
             // FolderDetailsPanel
             // 
@@ -88,6 +100,7 @@
         private System.Windows.Forms.Panel pnlTop;
         private System.Windows.Forms.Panel pnlBottom;
         private System.Windows.Forms.Label lblFolderName;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtFolderName;
+        private System.Windows.Forms.CheckBox chkApplyName;
     }
 }
